@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', 'PageController@home')->name('/home');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/brand', 'PageController@brand')->name('brand');
+Route::get('/basket/', 'PageController@basket')->name('basket');
+Route::get('/save_basket/{id}', 'PageController@saveBasket')->name('save_basket');
+Route::get('/contact', 'PageController@contact')->name('contact');
+Route::get('/entry', 'PageController@entry')->name('entry');
+Route::get('/action', 'PageController@action')->name('action');
+Route::get('/second_action', 'PageController@second_action')->name('second_action');
+Route::get('/category/{id}', 'PageController@category')->name('category');
+Route::get('/custom', 'PageController@custom')->name('custom');
+Route::get('/thanks', 'PageController@thanks')->name('thanks');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('/');
