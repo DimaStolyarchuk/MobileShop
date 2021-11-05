@@ -2,15 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Apple;
+use App\Asus;
+use App\Category;
 use App\Home;
+use App\Nokia;
+use App\Samsung;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home()
     {
+        $dataCategorys = Category::get();
         $dataHomes = Home::get();
-        return view('home',compact('dataHomes'));
+        return view('home',compact('dataHomes', 'dataCategorys'));
+    }
+
+    public function apple()
+    {
+        $dataApples = Apple::get();
+        return view('apple',compact('dataApples'));
+    }
+
+    public function asus()
+    {
+        $dataAsuse = Asus::get();
+        return view('asus',compact('dataAsuse'));
+    }
+
+    public function huawei()
+    {
+        $dataHuaweis = Apple::get();
+        return view('huawei',compact('dataHuaweis'));
+    }
+
+    public function nokia()
+    {
+        $dataNokias = Nokia::get();
+        return view('nokia',compact('dataNokias'));
+    }
+
+    public function samsung()
+    {
+        $dataSamsungs = Samsung::get();
+        return view('samsung',compact('dataSamsungs'));
     }
 
 //    public function about()

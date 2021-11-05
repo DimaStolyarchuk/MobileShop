@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
-                    <h2>Категорії товару</h2>
+                    <h2>Сторінка Samsung</h2>
                 </div>
             </div>
         </div>
@@ -62,12 +62,12 @@
     <div class="brand-bg">
         <div class="container">
             <div class="row">
-                @foreach($dataCategorys as $dataCategory)
+                @foreach($dataSamsungs as $dataSamsung)
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                         <div class="brand_box">
-                            <img src="{{ asset('storage/app/public/'. $dataCategory->image) }}" alt="img" />
-                            <h3 class="entry-title"><a rel="bookmark">{{ $dataCategory->name }}</a></h3>
-{{--                            <h1><a class="red" href="{{ route('category', ['id' => $dataCategory->id]) }}" rel="bookmark">{{ $dataCategory->description }}</a></h1>--}}
+                            <img src="{{ asset('storage/app/public/'. $dataSamsung->image) }}" alt="img" />
+                            <h3 class="entry-title"><a rel="bookmark">{{ $dataSamsung->name }}</a></h3>
+                            {{--                                           <h1><a class="red" href="{{ route('category', ['id' => $dataCategory->id]) }}" rel="bookmark">{{ $dataCategory->description }}</a></h1>--}}
                         </div>
                     </div>
                 @endforeach
@@ -75,43 +75,7 @@
         </div>
     </div>
 </div>
-
-<div class="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2>Що думають наші клієнти</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clients_red">
-    <div class="container">
-        <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-{{--                @foreach($dataComments as $dataComment)--}}
-{{--                    <li data-target="#testimonial_slider" data-slide-to="{{ $loop->index }}" class="@if($loop->index == 1) active @endif"></li>--}}
-{{--                @endforeach--}}
-            </ul>
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-{{--                @foreach($dataComments as $dataComment)--}}
-{{--                    <div class="carousel-item @if($loop->index == 1) active @endif">--}}
-{{--                        <div class="testomonial_section">--}}
-{{--                            <div class="full center"></div>--}}
-{{--                            <div class="full testimonial_cont text_align_center cross_layout">--}}
-{{--                                <div class="cross_inner">--}}
-{{--                                    <h3>{{ $dataComment->name }}<br><strong class="ornage_color">{{ $dataComment->title }}</strong></h3>--}}
-{{--                                    <p>{{ $dataComment->comment }}</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
-            </div>
-        </div>
-    </div>
-</div>
 @include('second_header')
+
+
+
