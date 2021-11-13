@@ -69,51 +69,26 @@
 
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-copy"></i>--}}
-{{--                        <p>--}}
-{{--                            Головна сторінка--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                            <span class="badge badge-info right"></span>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_home') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Головна сторінка</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('home_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нова головна сторінка</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Головна Apple
+                            Бренди
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-info right"></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('admin_apple') }}" class="nav-link">
+                            <a href="{{ route('admin_brands') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Сторінка Apple</p>
+                                <p>Сторінка брендів</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('apple_form') }}" class="nav-link">
+                            <a href="{{ route('brands_form') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Новий категорія Apple</p>
+                                <p>Новий бренди</p>
                             </a>
                         </li>
                     </ul>
@@ -122,253 +97,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Головна Asus
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin_asus') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Сторінка Asus</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('asus_form') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Новий категорія Asus</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Головна Huawei
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin_huawei') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Сторінка Huawei</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('huawei_form') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Новий категорія Huawei</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Головна Nokia
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin_nokia') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Сторінка Nokia</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('nokia_form') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Новий категорія Nokia</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Головна Samsung
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('admin_samsung') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Сторінка Samsung</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('samsung_form') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Новий категорія Samsung</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-chart-pie"></i>--}}
-{{--                        <p>--}}
-{{--                            Про нас--}}
-{{--                            <i class="right fas fa-angle-left"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_about') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Про нас</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('about_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нова інформація</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-tree"></i>--}}
-{{--                        <p>--}}
-{{--                            Бренд--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_brand') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Бренд</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('brand_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Новий бренд</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-edit"></i>--}}
-{{--                        <p>--}}
-{{--                            Пропозиції--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="pages/forms/general.html" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Пропозиції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="pages/forms/advanced.html" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нові пропозиції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-table"></i>--}}
-{{--                        <p>--}}
-{{--                            Контакти--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="pages/tables/simple.html" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Контакти</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="pages/tables/data.html" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нові контакти</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-tree"></i>--}}
-{{--                        <p>--}}
-{{--                            Акції--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_action') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Акції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('action_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нові акції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_secondaction') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Другі акції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('secondaction_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нові другі акції</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-table"></i>--}}
-{{--                        <p>--}}
-{{--                            Товар--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_product') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Товар</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('product_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Новий товар</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Сторінка категорій
+                            Категорії
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-info right"></span>
                         </p>
@@ -377,41 +106,17 @@
                         <li class="nav-item">
                             <a href="{{ route('admin_category') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Категорії</p>
+                                <p>Сторінка Категорій</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('category_form') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Нова категорія</p>
+                                <p>Новий Категорії</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tree"></i>
-                        <p>
-                            Коментарі
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('admin_comment') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Коментарі</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{ route('comment_form') }}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Нові коментарі</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-                    </ul>
-                </li>
-
             </ul>
         </nav>
     </div>

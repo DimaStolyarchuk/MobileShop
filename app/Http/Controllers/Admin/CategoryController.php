@@ -18,7 +18,7 @@ class CategoryController extends Controller
         return view('admin.category_form', compact('dataCategorys'));
     }
 
-    public function saveCategory(Request $request){
+    public function saveСategory(Request $request){
         $request->file('image')->store('unloads', 'public');
 
         $dataCategorys = $request->all();
@@ -27,6 +27,7 @@ class CategoryController extends Controller
         ],[
             'image' => $request->file('image')->getClientOriginalName(),
             'name' => $dataCategorys['name'],
+            'slug' => $dataCategorys['slug'],
             'action' => $dataCategorys['action'],
             'priority' => $dataCategorys['priority'],
         ]);
@@ -41,4 +42,7 @@ class CategoryController extends Controller
         Category::where('id', $id)->delete();
         return back();
     }
+
+
+
 }

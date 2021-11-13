@@ -11,6 +11,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Зображення</th>
                             <th scope="col">Назва</th>
+                            <th scope="col">Слуг</th>
                             <th scope="col">Активність</th>
                             <th scope="col">Преорітет</th>
                             <th scope="col">Редагування/Видалення</th>
@@ -20,6 +21,7 @@
                                     <th scope="row">{{$dataCategory->id}}</th>
                                     <td>{{$dataCategory->image}}</td>
                                     <td>{{$dataCategory->name}}</td>
+                                    <td>{{$dataCategory->slug}}</td>
                                     <td>{{$dataCategory->action}}</td>
                                     <td>{{$dataCategory->priority}}</td>
                                     <td>

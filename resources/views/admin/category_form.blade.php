@@ -28,6 +28,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label for="email1">слуг</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="slug" class="form-control" id="email1"
+                                                       placeholder="слуг">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label for="email1">Активність</label>
                                             <div class="col-sm-9">
                                                 <select name="action">
