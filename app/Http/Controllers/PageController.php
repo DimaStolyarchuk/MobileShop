@@ -2,52 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Apple;
-use App\Asus;
+use App\Brands;
 use App\Category;
 use App\Home;
-use App\Nokia;
-use App\Samsung;
+
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home()
     {
-        $dataCategorys = Category::get();
+        $dataBrands = Brands::get();
         $dataHomes = Home::get();
-        return view('home',compact('dataHomes', 'dataCategorys'));
+        return view('home',compact('dataHomes', 'dataBrands'));
     }
 
-    public function apple()
+    public function category($slug)
     {
-        $dataApples = Apple::get();
-        return view('apple',compact('dataApples'));
+        $dataCategorys = Brands::where('slug', $slug)->with(['categories' => function ($q) {
+            $q->where('action', 1);
+        }])->first();
+        return view('category',compact('dataCategorys'));
     }
 
-    public function asus()
-    {
-        $dataAsuse = Asus::get();
-        return view('asus',compact('dataAsuse'));
-    }
-
-    public function huawei()
-    {
-        $dataHuaweis = Apple::get();
-        return view('huawei',compact('dataHuaweis'));
-    }
-
-    public function nokia()
-    {
-        $dataNokias = Nokia::get();
-        return view('nokia',compact('dataNokias'));
-    }
-
-    public function samsung()
-    {
-        $dataSamsungs = Samsung::get();
-        return view('samsung',compact('dataSamsungs'));
-    }
+    //    public function category()
+//    {
+//
+//        $dataCategorys = Category::get();
+//        return view('category',compact('dataCategorys'));
+//    }
 
 //    public function about()
 //    {

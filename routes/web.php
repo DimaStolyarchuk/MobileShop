@@ -14,11 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', 'PageController@home')->name('/home');
-Route::get('/apple', 'PageController@apple')->name('/apple');
-Route::get('/asus', 'PageController@asus')->name('/asus');
-Route::get('/huawei', 'PageController@huawei')->name('/huawei');
-Route::get('/nokia', 'PageController@nokia')->name('/nokia');
-Route::get('/samsung', 'PageController@samsung')->name('/samsung');
+//Route::get('/category', 'PageController@category')->name('/category');
+Route::get('/category/{slug}', 'PageController@category')->name('/category');
+
 
 //Route::get('/about', 'PageController@about')->name('about');
 //Route::get('/brand', 'PageController@brand')->name('brand');
@@ -35,42 +33,17 @@ Route::get('/second_action', 'PageController@second_action')->name('second_actio
 
 
 
+Route::get('/admin_brands', 'Admin\BrandsController@brands')->name('admin_brands');
+Route::get('/brands_form', 'Admin\BrandsController@brands_form')->name('brands_form');
+Route::post('/save_brands', 'Admin\BrandsController@saveBrands')->name('save_brands');
+Route::get('/brands_edit/{id}', 'Admin\BrandsController@edit_brands')->name('edit_brands');
+Route::get('/brands_delete/{id}', 'Admin\BrandsController@delete_brands')->name('delete_brands');
+
 Route::get('/admin_category', 'Admin\CategoryController@category')->name('admin_category');
 Route::get('/category_form', 'Admin\CategoryController@category_form')->name('category_form');
-Route::post('/save_category', 'Admin\CategoryController@saveCategory')->name('save_category');
+Route::post('/save_category', 'Admin\CategoryController@saveСategory')->name('save_category');
 Route::get('/category_edit/{id}', 'Admin\CategoryController@edit_category')->name('edit_category');
 Route::get('/category_delete/{id}', 'Admin\CategoryController@delete_category')->name('delete_category');
-
-Route::get('/admin_asus', 'Admin\AsusController@asus')->name('admin_asus');
-Route::get('/asus_form', 'Admin\AsusController@asus_form')->name('asus_form');
-Route::post('/save_asus', 'Admin\AsusController@saveAsus')->name('save_asus');
-Route::get('/asus_edit/{id}', 'Admin\AsusController@edit_aasus')->name('edit_asus');
-Route::get('/asus_delete/{id}', 'Admin\AsusController@delete_asus')->name('delete_asus');
-
-Route::get('/admin_apple', 'Admin\AppleController@apple')->name('admin_apple');
-Route::get('/apple_form', 'Admin\AppleController@apple_form')->name('apple_form');
-Route::post('/save_apple', 'Admin\AppleController@saveApple')->name('save_apple');
-Route::get('/apple_edit/{id}', 'Admin\AppleController@edit_apple')->name('edit_apple');
-Route::get('/apple_delete/{id}', 'Admin\AppleController@delete_apple')->name('delete_apple');
-
-Route::get('/admin_huawei', 'Admin\HuaweiController@huawei')->name('admin_huawei');
-Route::get('/huawei_form', 'Admin\HuaweiController@huawei_form')->name('huawei_form');
-Route::post('/save_huawei', 'Admin\HuaweiController@saveHuawei')->name('save_huawei');
-Route::get('/huawei_edit/{id}', 'Admin\HuaweiController@edit_huawei')->name('edit_huawei');
-Route::get('/huawei_delete/{id}', 'Admin\HuaweiController@delete_huawei')->name('delete_huawei');
-
-Route::get('/admin_nokia', 'Admin\NokiaController@nokia')->name('admin_nokia');
-Route::get('/nokia_form', 'Admin\NokiaController@nokia_form')->name('nokia_form');
-Route::post('/save_nokia', 'Admin\NokiaController@saveNokia')->name('save_nokia');
-Route::get('/nokia_edit/{id}', 'Admin\NokiaController@edit_nokia')->name('edit_nokia');
-Route::get('/nokia_delete/{id}', 'Admin\NokiaController@delete_nokia')->name('delete_nokia');
-
-Route::get('/admin_samsung', 'Admin\SamsungController@samsung')->name('admin_samsung');
-Route::get('/samsung_form', 'Admin\SamsungController@samsung_form')->name('samsung_form');
-Route::post('/save_samsung', 'Admin\SamsungController@saveSamsung')->name('save_samsung');
-Route::get('/samsung_edit/{id}', 'Admin\SamsungController@edit_samsung')->name('edit_samsung');
-Route::get('/samsung_delete/{id}', 'Admin\SamsungController@delete_samsung')->name('delete_samsung');
-
 
 
 Auth::routes();

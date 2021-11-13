@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
-                    <h2>Бренди</h2>
+                    <h2>Категорії</h2>
                 </div>
             </div>
         </div>
@@ -62,15 +62,15 @@
     <div class="brand-bg">
         <div class="container">
             <div class="row">
-                @foreach($dataBrands as $dataBrand)
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{ asset('storage/app/public/'. $dataBrand->image) }}" alt="img" />
-{{--                            <h3 class="entry-title"><a rel="bookmark">{{ $dataBrand->name }}</a></h3>--}}
-                            <h3><a class="entry-title" href="{{ route('/category', ['slug' => $dataBrand->slug]) }}" rel="bookmark">{{ $dataBrand->name }}</a></h3>
-                        </div>
-                    </div>
-                @endforeach
+{{--                @foreach($dataCategorys->categories as $dataCategory)--}}
+{{--                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">--}}
+{{--                        <div class="brand_box">--}}
+{{--                            <img src="{{ asset('storage/app/public/'. $dataCategory->image) }}" alt="img" />--}}
+{{--                            <h3 class="entry-title"><a rel="bookmark">{{ $dataCategory->name }}</a></h3>--}}
+{{--                            --}}{{--                            <h3><a class="entry-title" href="{{ route('/home', ['id' => $dataBrand->id]) }}" rel="bookmark">{{ $dataBrand->name }}</a></h3>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
             </div>
         </div>
     </div>
@@ -91,27 +91,29 @@
     <div class="container">
         <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
-{{--                @foreach($dataComments as $dataComment)--}}
-{{--                    <li data-target="#testimonial_slider" data-slide-to="{{ $loop->index }}" class="@if($loop->index == 1) active @endif"></li>--}}
-{{--                @endforeach--}}
+                {{--                @foreach($dataComments as $dataComment)--}}
+                {{--                    <li data-target="#testimonial_slider" data-slide-to="{{ $loop->index }}" class="@if($loop->index == 1) active @endif"></li>--}}
+                {{--                @endforeach--}}
             </ul>
             <!-- The slideshow -->
             <div class="carousel-inner">
-{{--                @foreach($dataComments as $dataComment)--}}
-{{--                    <div class="carousel-item @if($loop->index == 1) active @endif">--}}
-{{--                        <div class="testomonial_section">--}}
-{{--                            <div class="full center"></div>--}}
-{{--                            <div class="full testimonial_cont text_align_center cross_layout">--}}
-{{--                                <div class="cross_inner">--}}
-{{--                                    <h3>{{ $dataComment->name }}<br><strong class="ornage_color">{{ $dataComment->title }}</strong></h3>--}}
-{{--                                    <p>{{ $dataComment->comment }}</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
+                {{--                @foreach($dataComments as $dataComment)--}}
+                {{--                    <div class="carousel-item @if($loop->index == 1) active @endif">--}}
+                {{--                        <div class="testomonial_section">--}}
+                {{--                            <div class="full center"></div>--}}
+                {{--                            <div class="full testimonial_cont text_align_center cross_layout">--}}
+                {{--                                <div class="cross_inner">--}}
+                {{--                                    <h3>{{ $dataComment->name }}<br><strong class="ornage_color">{{ $dataComment->title }}</strong></h3>--}}
+                {{--                                    <p>{{ $dataComment->comment }}</p>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                @endforeach--}}
             </div>
         </div>
     </div>
 </div>
 @include('second_header')
+
+

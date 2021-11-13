@@ -11,25 +11,30 @@
                             <th scope="col">#</th>
                             <th scope="col">Зображення</th>
                             <th scope="col">Назва</th>
+                            <th scope="col">Слуг</th>
                             <th scope="col">Активність</th>
                             <th scope="col">Преорітет</th>
                             <th scope="col">Редагування/Видалення</th>
                             </thead>
-                            @foreach($dataAsuse as $dataAsus)
+                            @foreach($dataBrands as $dataBrand)
                                 <tr>
-                                    <th scope="row">{{$dataAsus->id}}</th>
-                                    <td>{{$dataAsus->image}}</td>
-                                    <td>{{$dataAsus->name}}</td>
-                                    <td>{{$dataAsus->action}}</td>
-                                    <td>{{$dataAsus->priority}}</td>
+                                    <th scope="row">{{$dataBrand->id}}</th>
+                                    <td>{{$dataBrand->image}}</td>
+                                    <td>{{$dataBrand->name}}</td>
+                                    <td>{{$dataBrand->slug}}</td>
+                                    <td>{{$dataBrand->action}}</td>
+                                    <td>{{$dataBrand->priority}}</td>
                                     <td>
-                                        <a href="{{ route('edit_asus', ['id' => $dataAsus->id]) }}">
+                                        <a href="{{ route('edit_brands', ['id' => $dataBrand->id]) }}">
                                             edit
                                         </a>
                                         /
-                                        <a href="{{ route('delete_asus', ['id' => $dataAsus->id]) }}">
+                                        <a href="{{ route('delete_brands', ['id' => $dataBrand->id]) }}">
                                             delete
                                         </a>
+
+
+
                                     </td>
                                 </tr>
                             @endforeach
