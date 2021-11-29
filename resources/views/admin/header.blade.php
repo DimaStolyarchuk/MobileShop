@@ -117,6 +117,30 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Продукти
+                            <i class="fas fa-angle-left right"></i>
+                            <span class="badge badge-info right"></span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin_product') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Сторінка Продуктів</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('product_form') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Новий Продукти</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>

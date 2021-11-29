@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
-                    <h2>Категорії</h2>
+                    <h2>Продукти</h2>
                 </div>
             </div>
         </div>
@@ -62,15 +62,15 @@
     <div class="brand-bg">
         <div class="container">
             <div class="row">
-{{--                @foreach($dataCategorys->categories as $dataCategory)--}}
-{{--                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">--}}
-{{--                        <div class="brand_box">--}}
-{{--                            <img src="{{ asset('storage/app/public/'. $dataCategory->image) }}" alt="img" />--}}
-{{--                            <h3 class="entry-title"><a rel="bookmark">{{ $dataCategory->name }}</a></h3>--}}
-{{--                            --}}{{--                            <h3><a class="entry-title" href="{{ route('/home', ['id' => $dataBrand->id]) }}" rel="bookmark">{{ $dataBrand->name }}</a></h3>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
+                @foreach($products->products as $product)
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                        <div class="brand_box">
+                            <img src="{{ asset('storage/app/public/'. $product->image) }}" alt="img" />
+                            <h3 class="entry-title"><a rel="bookmark">{{ $product->name }}</a></h3>
+{{--                            <h3><a class="entry-title" href="{{ route('/home', ['id' => $dataCategor->id]) }}" rel="bookmark">{{ $dataCategor->name }}</a></h3>--}}
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -26,6 +26,22 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label for="email1">Слуг</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" name="slug" class="form-control" id="email1" value="{{$dataCategorys->slug ?? ''}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="email1">Продукти</label>
+                                            <div class="col-sm-9">
+                                                <select multiple name="product_id[]" >
+                                                    @foreach($product as $products)
+                                                        <option value="{{$products->id}}">{{$products->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label for="email1">Активність</label>
                                             <div class="col-sm-9">
                                                 <select name="action">

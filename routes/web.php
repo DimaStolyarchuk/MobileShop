@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', 'PageController@home')->name('/home');
 //Route::get('/category', 'PageController@category')->name('/category');
 Route::get('/category/{slug}', 'PageController@category')->name('/category');
+Route::get('/product/{slug}', 'PageController@product')->name('/product');
+Route::get('product/{brand}/{category}', 'PageController@productInCatalog')->name('product_in_catalog');
 
 
 //Route::get('/about', 'PageController@about')->name('about');
@@ -44,6 +46,12 @@ Route::get('/category_form', 'Admin\CategoryController@category_form')->name('ca
 Route::post('/save_category', 'Admin\CategoryController@saveСategory')->name('save_category');
 Route::get('/category_edit/{id}', 'Admin\CategoryController@edit_category')->name('edit_category');
 Route::get('/category_delete/{id}', 'Admin\CategoryController@delete_category')->name('delete_category');
+
+Route::get('/admin_product', 'Admin\ProductController@product')->name('admin_product');
+Route::get('/product_form', 'Admin\ProductController@product_form')->name('product_form');
+Route::post('/save_product', 'Admin\ProductController@saveProduct')->name('save_product');
+Route::get('/product_edit/{id}', 'Admin\ProductController@edit_product')->name('edit_product');
+Route::get('/product_delete/{id}', 'Admin\ProductController@delete_product')->name('delete_product');
 
 
 Auth::routes();
