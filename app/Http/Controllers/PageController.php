@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Brands;
 use App\Category;
 use App\Home;
+use Illuminate\Database\Eloquent\Builder;
 
 use Illuminate\Http\Request;
 
@@ -23,6 +24,21 @@ class PageController extends Controller
             $q->where('action', 1);
         }])->first();
         return view('category',compact('dataCategorys'));
+    }
+
+    public function productInCatalog($brand, $category)
+    {
+
+        $brand = Brands::whereSlug($brand)->first();
+
+        $products = Category::where('slug', $category)->with(['products' => function ($query) use ($brand) {
+            $query->where([
+                'brand_id' => $brand->id
+            ]);
+        }])->first();
+
+        return view('product',compact('products'));
+
     }
 
     //    public function category()

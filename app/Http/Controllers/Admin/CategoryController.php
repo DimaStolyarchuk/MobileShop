@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function category(){
+    public function category()
+    {
         $dataCategorys = Category::get();
         return view('admin.category', compact('dataCategorys'));
     }
@@ -34,8 +36,10 @@ class CategoryController extends Controller
         return back();
     }
     public function edit_category($id){
+
+        $product = Product::get();
         $dataCategorys = Category::where('id', $id)->first();
-        return view('admin.edit_category', compact('dataCategorys'));
+        return view('admin.edit_category', compact('dataCategorys', 'product'));
     }
 
     public function delete_category($id){

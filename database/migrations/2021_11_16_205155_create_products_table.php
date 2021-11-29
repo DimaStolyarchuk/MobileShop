@@ -17,6 +17,10 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('image');
             $table->string('name');
+            $table->string('price');
+            $table->string('description');
+            $table->string('brand');
+            $table->string('category');
             $table->string('slug');
             $table->tinyInteger('action');
             $table->integer('priority');

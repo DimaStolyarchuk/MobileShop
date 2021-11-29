@@ -66,8 +66,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                         <div class="brand_box">
                             <img src="{{ asset('storage/app/public/'. $dataCategory->image) }}" alt="img" />
-                            <h3 class="entry-title"><a rel="bookmark">{{ $dataCategory->name }}</a></h3>
-{{--                            <h3><a class="entry-title" href="{{ route('/home', ['id' => $dataBrand->id]) }}" rel="bookmark">{{ $dataBrand->name }}</a></h3>--}}
+                            <h3><a class="entry-title" href="{{ route('product_in_catalog', ['brand' => $dataCategorys->slug, 'category' => $dataCategory->slug]) }}" rel="bookmark">{{ $dataCategory->name }}</a></h3>
                         </div>
                     </div>
                 @endforeach

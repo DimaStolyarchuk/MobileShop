@@ -26,12 +26,6 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="email1">Слуг</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" name="slug" class="form-control" id="email1" value="{{$dataBrands->slug ?? ''}}">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
                                             <label for="email1">Категорії</label>
                                             <div class="col-sm-9">
                                                 <select multiple name="category_id[]" >

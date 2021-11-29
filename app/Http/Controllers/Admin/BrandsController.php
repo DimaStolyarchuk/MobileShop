@@ -6,6 +6,7 @@ use App\Brands;
 use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BrandsController extends Controller
 {
@@ -19,16 +20,23 @@ class BrandsController extends Controller
         return view('admin.brands_form', compact('dataBrands'));
     }
 
-    public function saveBrands(Request $request){
-       // $request->file('image')->store('unloads', 'public');
-
+    public function saveBrands(Request $request)
+    {
         $dataBrands = $request->all();
+
+        if  ($request->file('image')) {
+            $request->file('image')->store('unloads', 'public');
+            $image = $request->file('image')->getClientOriginalName();
+        } else {
+            $image = $dataBrands['image_2'];
+        }
+
         $brands = Brands::updateOrCreate([
             'id' => $dataBrands['id'],
         ],[
-           // 'image' => $request->file('image')->getClientOriginalName(),
+            'image' =>$image,
             'name' => $dataBrands['name'],
-            'slug' => $dataBrands['slug'],
+            'slug' => Str::slug($dataBrands['name'], '-'),
             'action' => $dataBrands['action'],
             'priority' => $dataBrands['priority'],
         ]);
