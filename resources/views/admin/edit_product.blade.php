@@ -40,7 +40,7 @@
                                         <div class="form-group row">
                                             <label for="email1">Бренд</label>
                                             <div class="col-sm-9">
-                                                <select multiple name="brand_id[]" >
+                                                <select multiple name="brand_id" >
                                                     @foreach($brand as $brands)
                                                         <option value="{{$brands->id}}">{{$brands->name}}</option>
                                                     @endforeach
@@ -50,7 +50,7 @@
                                         <div class="form-group row">
                                             <label for="email1">Категорія</label>
                                             <div class="col-sm-9">
-                                                <select multiple name="category_id[]" >
+                                                <select multiple name="category_id" >
                                                     @foreach($category as $categorys)
                                                         <option value="{{$categorys->id}}">{{$categorys->name}}</option>
                                                     @endforeach

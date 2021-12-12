@@ -48,35 +48,24 @@
         </a>
     </div>
 </section>
-
-<div class="brand">
+<div class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2>Продукти</h2>
+            <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                <div class="about_img">
+                    <figure><img src="{{ asset('storage/app/public/'. $product->image) }}" alt="img" /></figure>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                <div class="about_box">
+                    <h3>{{$product->name}}</h3>
+                    <span>{{$product->price}}</span>
+                    <p>{{ $product->description }}</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="brand-bg">
-        <div class="container">
-            <div class="row">
-                @foreach($products->products as $product)
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{ asset('storage/app/public/'. $product->image) }}" alt="img" />
-                            <h3><a class="entry-title"href="{{ route('productItem', ['brand' => $product->brand->slug, 'category' => $product->category->slug, 'product' => $product->slug]) }}" rel="bookmark">{{ $product->name }} </a></h3>
-                            <h3><strong class="red">{{ $product->price }}</strong></h3>
-                            <h3 class="entry-title"><a>{{ $product->description }}</a></h3>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
 </div>
-
 <div class="clients">
     <div class="container">
         <div class="row">
@@ -116,5 +105,6 @@
     </div>
 </div>
 @include('second_header')
+
 
 
