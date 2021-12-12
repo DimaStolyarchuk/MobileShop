@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', 'PageController@home')->name('/home');
-//Route::get('/category', 'PageController@category')->name('/category');
 Route::get('/category/{slug}', 'PageController@category')->name('/category');
 Route::get('/product/{slug}', 'PageController@product')->name('/product');
 Route::get('product/{brand}/{category}', 'PageController@productInCatalog')->name('product_in_catalog');
+Route::get('/productItem/{brand}/{category}/{product}', 'PageController@productItem')->name('productItem');
 
 
 //Route::get('/about', 'PageController@about')->name('about');

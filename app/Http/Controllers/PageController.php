@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Brands;
 use App\Category;
 use App\Home;
+use App\Product;
 use Illuminate\Database\Eloquent\Builder;
 
 use Illuminate\Http\Request;
@@ -16,6 +17,12 @@ class PageController extends Controller
         $dataBrands = Brands::get();
         $dataHomes = Home::get();
         return view('home',compact('dataHomes', 'dataBrands'));
+    }
+
+    public function productItem($brand, $category, $product)
+    {
+        $product = Product::whereSlug($product)->first();
+        return view('product_item',compact( 'product'));
     }
 
     public function category($slug)
